@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PatientList from "./components/PatientList";
+import Calendar from "./components/Calendar";
+import Messages from "./components/Messages";
+import Overview from "./components/Overview";
+import Paymentinfo from "./components/PaymentInfo";
+import Settings from "./components/Settings";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Sidebar />
+        <main>
+          <Routes>
+            <Route exact path="/" element={<PatientList />} />
+            <Route path="/calendar" element={<Calendar />} />
+            <Route path="/messages" element={<Messages />} />
+            <Route path="/overview" element={<Overview />} />
+            <Route path="/paymentinfo" element={<Paymentinfo />} />
+            <Route path="/settings" element={<Settings />} />
+          </Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 }
