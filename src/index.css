@@ -18,7 +18,7 @@ a {
 }
 
 .sidebar-main {
-  height: 110vh;
+  height: 130vh;
   background-color: white;
   margin-left: -10px;
   border-radius: 40px;
@@ -90,7 +90,7 @@ a {
 
 .sidebar {
   position: relative;
-  height: 110vh;
+  height: 130vh;
 }
 
 .sidebar-footer {
@@ -155,7 +155,7 @@ a {
   color: gray;
 }
 main {
-  height: 110vh;
+  height: 130vh;
   /* background-color: rgb(164, 152, 152); */
   width: 100%;
   /* background-color: rgb(241, 241, 253); */
